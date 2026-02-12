@@ -1,0 +1,4 @@
+baseURL = 'https://loustack17.github.io/'
+languageCode = 'en-us'
+title = 'loustack17 - Personal Website'
+publishDir = 'docs'

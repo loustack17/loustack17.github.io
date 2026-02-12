@@ -1,0 +1,20 @@
+{{ define "title" }}{{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<h2>Welcome!</h2>
+<p>This is a simple static website built with Hugo.</p>
+
+{{ .Content }}
+
+{{ if .Site.RegularPages }}
+<h3>Recent Content</h3>
+<ul>
+    {{ range first 5 .Site.RegularPages }}
+    <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ if .Date }}<span> - {{ .Date.Format "January 2, 2006" }}</span>{{ end }}
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
+{{ end }}
